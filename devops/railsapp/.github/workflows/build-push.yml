@@ -2,7 +2,7 @@ name: CI/CD - Rails Docker
 
 on:
   push:
-    branches: [main]
+    branches: main
 
 jobs:
   build:
