@@ -2,7 +2,8 @@ name: CI/CD - Rails Docker
 
 on:
   push:
-    branches: main
+    branches: 
+      - main
 
 jobs:
   build:
@@ -17,7 +18,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and Push Rails Docker Image
-      uses: docker/build-push-action@v1
+      uses: docker/build-push-action@v5
       with:
         context: .
         push: true
