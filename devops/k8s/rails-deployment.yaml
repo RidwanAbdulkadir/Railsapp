@@ -20,10 +20,10 @@ spec:
         env:
         - name: DATABASE_HOST
           value: postgres
-        - name: RIDWAN
+        - name: DATABASE_USER
           value: rails_db
-        - name: Ridwan
+        - name: DATABASE_NAME
           value: rails_user
-        - name: 2025
+        - name: DB_PASSWORD
           value: secret
 
