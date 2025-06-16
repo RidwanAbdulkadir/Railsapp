@@ -2,10 +2,10 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: <%= ENV["Ridwan"] %>
-  password: <%= ENV["2025"] %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   host: <%= ENV["DATABASE_HOST"] %>
 
 development:
   <<: *default
-  database: <%= ENV["RIDWAN"] %>
+  database: <%= ENV["DB_NAME"] %>
