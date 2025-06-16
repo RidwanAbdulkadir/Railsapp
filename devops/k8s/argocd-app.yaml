@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/yourusername/rails-app
     targetRevision: HEAD
-    path: argocd-app.yaml/k8s
+    path: k8s
   project: default
   syncPolicy:
     automated:
