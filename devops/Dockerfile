@@ -9,16 +9,17 @@ RUN apt-get update -qq && apt-get install -y nodejs postgresql-client yarn
 # Install bundler
 RUN gem install bundler
 
-# Copy app files
-COPY . .
+# Copy Gemfiles first (for layer caching)
+COPY Gemfile* ./
 
 # Install gems
 RUN bundle install
 
-# Precompile assets (optional, if using frontend)
-# RUN bundle exec rake assets:precompile
+# Copy the rest of the app, including Rakefile
+COPY . .
 
+# Expose port for the Rails server
 EXPOSE 3000
 
-CMD ["rails", "server", "-b", "0.0.0.0"]
-
+# Start app using Rake task
+CMD ["bundle", "exec", "rake", "start"]
