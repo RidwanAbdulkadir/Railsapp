@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/RidwanAbdulkadir/rails-app.git
     targetRevision: HEAD
-    path: /devopsk8s
+    path: devops/k8s
   project: default
   syncPolicy:
     automated:
