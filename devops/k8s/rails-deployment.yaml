@@ -29,7 +29,7 @@ spec:
         volumeMounts:
         - name: db-config
           mountPath: /app/config/database.yml
-          subPath: database.yml
+          subPath: rails-configmap.yaml
       volumes:
       - name: db-config
         configMap:
