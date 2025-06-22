@@ -26,4 +26,11 @@ spec:
           value: rails_user
         - name: DB_PASSWORD
           value: secret
-
+        volumeMounts:
+        - name: db-config
+          mountPath: /app/config/database.yml
+          subPath: database.yml
+      volumes:
+      - name: db-config
+        configMap:
+          name: rails-db-config
