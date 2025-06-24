@@ -7,4 +7,4 @@ spec:
     app: postgres
   ports:
     - port: 5432
-
+  clusterIP: None  # Optional but recommended with StatefulSet
