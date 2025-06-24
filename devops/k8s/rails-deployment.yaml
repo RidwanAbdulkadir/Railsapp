@@ -21,15 +21,15 @@ spec:
         - name: DATABASE_HOST
           value: postgres
         - name: DATABASE_USER
-          value: rails_db
-        - name: DATABASE_NAME
           value: rails_user
+        - name: DATABASE_NAME
+          value: rails_db
         - name: DB_PASSWORD
           value: secret
         volumeMounts:
         - name: db-config
           mountPath: /app/config/database.yml
-          subPath: rails-configmap.yaml
+          subPath: database.yml  # <-- Must match the key in ConfigMap
       volumes:
       - name: db-config
         configMap:
