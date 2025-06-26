@@ -1,8 +1,0 @@
-# Rakefile
-require_relative 'config/application'
-
-Rails.application.load_tasks
-
-task :start do
-  sh "rails server -b 0.0.0.0"
-end

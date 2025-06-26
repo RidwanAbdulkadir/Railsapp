@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rails-app
+  namespace: argocd  # ArgoCD's own namespace
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/YOUR_USERNAME/YOUR_REPO.git  # replace this
+    targetRevision: HEAD
+    path: k8s/rails-app  # path inside the repo where k8s manifests live
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: rails-app  # namespace where your app will be deployed
+
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+
