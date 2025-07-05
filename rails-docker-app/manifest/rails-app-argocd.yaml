@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/YOUR_USERNAME/YOUR_REPO.git  # replace this
     targetRevision: HEAD
-    path: k8s/rails-app  # path inside the repo where k8s manifests live
+    path: rails-docker-app/k8s/rails-app  # path inside the repo where k8s manifests live
 
   destination:
     server: https://kubernetes.default.svc
