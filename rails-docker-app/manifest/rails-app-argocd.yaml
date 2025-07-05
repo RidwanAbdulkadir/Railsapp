@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/YOUR_USERNAME/YOUR_REPO.git  # replace this
+    repoURL: https://github.com/RidwanAbdulkadir/railsapp.git  # replace this
     targetRevision: HEAD
     path: rails-docker-app/k8s/rails-app  # path inside the repo where k8s manifests live
 
