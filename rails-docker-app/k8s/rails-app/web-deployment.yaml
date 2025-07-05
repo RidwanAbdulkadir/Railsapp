@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rails-app
-        image: ridwan3030/rails-docker-app:latest
+        image: ridwan3030/railsapp:latest
         ports:
         - containerPort: 3000
         env:
