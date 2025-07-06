@@ -5,9 +5,11 @@ metadata:
 spec:
   selector:
     app: rails-app
+  type: NodePort
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-  type: ClusterIP
+      nodePort: 32115  # You can change this to any port between 30000–32767
+
 
